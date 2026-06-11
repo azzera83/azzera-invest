@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gouvernance & Vision | Azzera Invest</title>
+    <meta name="description" content="Découvrez la vision stratégique et l'équipe dirigeante d'Azzera Invest, holding du Groupe Azzera.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style-invest.css">
+
+    <style>
+        /* Styles spécifiques au Luxe de la page Gouvernance */
+        .gouvernance-hero { padding: 120px 0 80px 0; background: var(--gray-bg); text-align: center; }
+        .gouvernance-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 100px 0; align-items: center; }
+        
+        .quote-block { font-family: 'Montserrat', serif; font-size: 2.2rem; color: var(--primary-invest); line-height: 1.4; border-left: 4px solid var(--gold-accent); padding-left: 40px; margin-bottom: 30px; }
+        .quote-author { font-family: 'Montserrat', sans-serif; font-size: 1rem; color: #888; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+        
+        /* --- LA CARTE 3D VIDÉO DU DIRIGEANT --- */
+        .director-card-container { display: flex; justify-content: center; }
+        .team-card { background-color: transparent; width: 380px; height: 520px; perspective: 1500px; cursor: pointer; }
+        .team-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.9s cubic-bezier(0.4, 0.0, 0.2, 1); transform-style: preserve-3d; }
+        .team-card.is-flipped .team-card-inner { transform: rotateY(180deg); }
+        .team-card-front, .team-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 4px; overflow: hidden; box-shadow: 0 25px 60px rgba(20,28,37,0.15); border: 1px solid rgba(197, 168, 128, 0.3); }
+        
+        /* Face Avant */
+        .team-card-front { background-color: var(--primary-invest); }
+        .team-card-front img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(80%); transition: all 0.5s ease; }
+        .team-card:hover .team-card-front img { filter: grayscale(0%); transform: scale(1.05); }
+        .play-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to top, rgba(20,28,37,0.95), transparent 60%); display: flex; flex-direction: column; justify-content: flex-end; padding: 40px; color: white; text-align: left; transition: all 0.5s ease; }
+        .play-btn-luxe { width: 60px; height: 60px; background: rgba(197, 168, 128, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; color: white; margin-bottom: 20px; transition: all 0.3s ease; backdrop-filter: blur(5px); }
+        .team-card:hover .play-btn-luxe { transform: scale(1.1); background: var(--gold-accent); }
+        .dir-name { font-family: 'Montserrat', serif; font-size: 2rem; margin-bottom: 5px; }
+        .dir-title { font-family: 'Montserrat', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-accent); }
+        
+        /* Face Arrière (Vidéo) */
+        .team-card-back { background-color: #000; transform: rotateY(180deg); }
+        .team-card-back video { width: 100%; height: 100%; object-fit: cover; }
+
+        @media (max-width: 900px) { .gouvernance-content { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="topbar-corporate"><ul class="topbar-links"><li><a href="#" class="active">AZZERA INVEST</a></li><li><a href="https://www.azzeraprotect.fr">AZZERA PROTECT</a></li><li><a href="https://www.azzeraservices.fr">AZZERA SERVICES+</a></li><li><a href="https://www.azzera-academy.fr">AZZERA ACADEMY</a></li></ul></nav>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo"><a href="index.html"><img src="img/logo-invest.png" alt="Logo Azzera Invest" style="height: 500px; width: auto; object-fit: contain;"></a></div>
+            <nav class="main-nav"><ul><li><a href="le-groupe.html">Le Groupe</a></li><li><a href="filiales.html">Nos Filiales</a></li><li><a href="gouvernance.html" class="active">Gouvernance</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        </div>
+    </header>
+
+    <section class="gouvernance-hero">
+        <div class="container">
+            <span class="heading-subtitle">Le Leadership</span>
+            <h1 class="section-heading" style="font-size: 3.5rem; font-family: 'Montserrat', serif;">Gouvernance & Vision</h1>
+        </div>
+    </section>
+
+    <section class="container gouvernance-content">
+        <div class="gouvernance-text">
+            <div class="quote-block">
+                "L'excellence n'est pas un acte isolé, mais une habitude rigoureuse. C'est sur cette fondation que repose l'ensemble du Groupe."
+            </div>
+            <div class="quote-author">Yannice Libault — Président Fondateur</div>
+            <p style="margin-top: 40px; color: #555; line-height: 1.8;">
+                À la tête d'Azzera Invest, la direction stratégique s'assure que chaque filiale dispose des ressources, de la technologie et du cadre opérationnel nécessaires pour dominer son marché. Que ce soit dans la protection des biens, le facility management ou la formation des élites de demain, notre gouvernance est guidée par l'intransigeance qualitative et la solidité financière.
+            </p>
+        </div>
+
+        <div class="director-card-container">
+            <div class="team-card" onclick="toggleVideoFlip(this)">
+                <div class="team-card-inner">
+                    <div class="team-card-front">
+                        <img src="img/yannice-libault.jpg" alt="Yannice Libault - Azzera Invest"> <div class="play-overlay">
+                            <div class="play-btn-luxe"><i class="fas fa-play"></i></div>
+                            <h4 class="dir-name">Yannice Libault</h4>
+                            <span class="dir-title">Président Fondateur</span>
+                        </div>
+                    </div>
+                    <div class="team-card-back">
+                        <video src="video/mot-du-president.mp4" playsinline></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="legal-compliance">
+        <div class="container">
+            <div class="official-badge-container">
+                <div class="official-badge">
+                    <div class="badge-icon"><i class="fas fa-chess-king"></i></div>
+                    <div class="badge-content">
+                        <p class="badge-title">AZZERA INVEST GROUP (A.I.G) • Société Holding</p>
+                        <p class="badge-numbers"><strong>SIRET :</strong> 995 314 317 00018 | &nbsp;|&nbsp; <strong>Siège :</strong> 131 Avenue de Verdun, 83600 Fréjus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="compliance-inner">
+                <p>&copy; 2026 AZZERA INVEST GROUP (A.I.G) | Tous droits réservés sur l'ensemble du Groupe.</p>
+                <p style="margin-top: 10px;"><a href="mentions-legales.html" style="color: #888; text-decoration: none; transition: 0.3s; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">Mentions Légales & Politique de Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleVideoFlip(card) {
+            card.classList.toggle('is-flipped');
+            const video = card.querySelector('video');
+            if (card.classList.contains('is-flipped')) {
+                video.currentTime = 0;
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
+</body>
+</html>

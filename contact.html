@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relations Institutionnelles | Azzera Invest</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style-invest.css">
+
+    <style>
+        .contact-luxe-section { display: grid; grid-template-columns: 1fr 1.2fr; gap: 0; min-height: 80vh; }
+        
+        .contact-info-panel { background: var(--gray-bg); padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; }
+        .contact-info-panel h2 { font-family: 'Montserrat', serif; font-size: 3.5rem; color: var(--primary-invest); margin-bottom: 20px; line-height: 1.1; }
+        .contact-item { margin-top: 40px; }
+        .contact-item h4 { font-family: 'Montserrat', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-accent); margin-bottom: 10px; }
+        .contact-item p { font-size: 16px; color: #555; }
+        
+        .contact-form-panel { background: var(--primary-invest); padding: 100px 80px; display: flex; flex-direction: column; justify-content: center; color: white; }
+        .luxe-form-group { margin-bottom: 30px; }
+        .luxe-form-group label { display: block; font-family: 'Montserrat', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #aaa; margin-bottom: 10px; }
+        .luxe-input { width: 100%; background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.2); color: white; padding: 15px 0; font-family: 'Montserrat', sans-serif; font-size: 16px; transition: all 0.4s ease; }
+        .luxe-input:focus { outline: none; border-bottom: 1px solid var(--gold-accent); background: rgba(255,255,255,0.02); }
+        .luxe-input::placeholder { color: rgba(255,255,255,0.2); }
+        select.luxe-input option { background: var(--primary-invest); color: white; }
+        
+        @media (max-width: 900px) { .contact-luxe-section { grid-template-columns: 1fr; } .contact-info-panel, .contact-form-panel { padding: 60px 30px; } }
+    </style>
+</head>
+<body>
+
+    <nav class="topbar-corporate"><ul class="topbar-links"><li><a href="#" class="active">AZZERA INVEST</a></li><li><a href="https://www.azzeraprotect.fr">AZZERA PROTECT</a></li><li><a href="https://www.azzeraservices.fr">AZZERA SERVICES+</a></li><li><a href="https://www.azzera-academy.fr">AZZERA ACADEMY</a></li></ul></nav>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo"><a href="index.html"><img src="img/logo-invest.png" style="height: 500px;"></a></div>
+            <nav class="main-nav"><ul><li><a href="le-groupe.html">Le Groupe</a></li><li><a href="filiales.html">Nos Filiales</a></li><li><a href="gouvernance.html">Gouvernance</a></li><li><a href="contact.html" class="active">Contact</a></li></ul></nav>
+        </div>
+    </header>
+
+    <section class="contact-luxe-section">
+        <div class="contact-info-panel">
+            <span class="heading-subtitle">Direction du Groupe</span>
+            <h2>Relations Institutionnelles</h2>
+            <p style="color: #666; line-height: 1.8; margin-bottom: 40px;">La direction d'Azzera Invest étudie avec la plus grande rigueur chaque opportunité stratégique, de croissance externe ou de relation presse.</p>
+            
+            <div class="contact-item">
+                <h4>Siège Social</h4>
+                <p>131 Avenue de Verdun<br>83600 Fréjus, France</p>
+            </div>
+            <div class="contact-item">
+                <h4>Contact Direct</h4>
+                <p>direction@azzerainvest.fr</p>
+            </div>
+        </div>
+
+        <div class="contact-form-panel">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="cd8c47f9-06fb-46c8-9ae7-5532763b82a1"> <input type="hidden" name="subject" value="Nouveau contact institutionnel - Azzera Invest">
+
+                <div class="luxe-form-group">
+                    <label>Raison sociale / Institution</label>
+                    <input type="text" name="societe" class="luxe-input" required placeholder="Ex: Groupe XYZ">
+                </div>
+                
+                <div class="luxe-form-group">
+                    <label>Interlocuteur & Fonction</label>
+                    <input type="text" name="nom" class="luxe-input" required placeholder="Ex: Jean Dupont, Directeur Stratégie">
+                </div>
+
+                <div class="luxe-form-group">
+                    <label>Contact Direct (Email / Tél)</label>
+                    <input type="text" name="contact" class="luxe-input" required placeholder="Email ou Numéro de téléphone">
+                </div>
+
+                <div class="luxe-form-group">
+                    <label>Objet de la requête</label>
+                    <select name="objet" class="luxe-input" required>
+                        <option value="" disabled selected>Sélectionnez un motif...</option>
+                        <option value="Investissement">Opportunité d'Investissement / M&A</option>
+                        <option value="Partenariat">Partenariat Stratégique</option>
+                        <option value="Presse">Relations Presse / Médias</option>
+                        <option value="Autre">Autre requête institutionnelle</option>
+                    </select>
+                </div>
+
+                <div class="luxe-form-group">
+                    <label>Votre Message</label>
+                    <textarea name="message" class="luxe-input" rows="4" required placeholder="Veuillez détailler l'objet de votre prise de contact..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary-invest-light" style="width: 100%; text-align: center; border: none; cursor: pointer; margin-top: 20px;">Transmettre à la direction</button>
+            </form>
+        </div>
+    </section>
+<footer class="legal-compliance">
+        <div class="container">
+            <div class="official-badge-container">
+                <div class="official-badge">
+                    <div class="badge-icon"><i class="fas fa-chess-king"></i></div>
+                    <div class="badge-content">
+                        <p class="badge-title">AZZERA INVEST GROUP (A.I.G) • Société Holding</p>
+                        <p class="badge-numbers"><strong>SIRET :</strong> 995 314 317 00018 | &nbsp;|&nbsp; <strong>Siège :</strong> 131 Avenue de Verdun, 83600 Fréjus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="compliance-inner">
+                <p>&copy; 2026 AZZERA INVEST GROUP (A.I.G) | Tous droits réservés sur l'ensemble du Groupe.</p>
+                <p style="margin-top: 10px;"><a href="mentions-legales.html" style="color: #888; text-decoration: none; transition: 0.3s; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">Mentions Légales & Politique de Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

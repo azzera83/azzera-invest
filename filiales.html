@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Filiales | Azzera Invest</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style-invest.css">
+
+    <style>
+        .filiales-hero { padding: 140px 0 100px 0; background: var(--gray-bg); text-align: center; }
+        .filiales-hero h1 { font-family: 'Montserrat', serif; font-size: 4rem; color: var(--primary-invest); line-height: 1.1; margin-bottom: 20px; }
+        
+        /* Les blocs alternés ultra-luxe */
+        .filiale-block { padding: 120px 0; border-bottom: 1px solid #eee; background: var(--white); }
+        .filiale-block:nth-child(even) { background: var(--gray-bg); }
+        
+        .block-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        /* Inverse l'ordre pour les blocs pairs (uniquement sur grand écran) */
+        .filiale-block:nth-child(even) .block-image { order: 2; }
+        .filiale-block:nth-child(even) .block-text { order: 1; }
+
+        .block-text h2 { font-family: 'Montserrat', serif; font-size: 3rem; color: var(--primary-invest); margin-bottom: 20px; }
+        .block-text p { color: #666; font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; }
+        
+        .expertise-list { list-style: none; margin-bottom: 40px; }
+        .expertise-list li { margin-bottom: 12px; font-weight: 600; color: var(--primary-invest); display: flex; align-items: center; gap: 15px; }
+        .expertise-list li i { color: var(--gold-accent); }
+
+        .block-image { background: var(--white); padding: 80px; border-radius: 4px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); }
+        .block-image img { max-width: 250px; height: auto; filter: grayscale(100%); transition: all 0.5s ease; }
+        .block-image:hover img { filter: grayscale(0%); transform: scale(1.05); }
+
+        @media (max-width: 900px) { 
+            .block-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+            .filiale-block:nth-child(even) .block-image, .filiale-block:nth-child(even) .block-text { order: unset; }
+            .expertise-list li { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="topbar-corporate"><ul class="topbar-links"><li><a href="#" class="active">AZZERA INVEST</a></li><li><a href="https://www.azzeraprotect.fr">AZZERA PROTECT</a></li><li><a href="https://www.azzeraservices.fr">AZZERA SERVICES+</a></li><li><a href="https://www.azzera-academy.fr">AZZERA ACADEMY</a></li></ul></nav>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo"><a href="index.html"><img src="img/logo-invest.png" style="height: 500px;"></a></div>
+            <nav class="main-nav"><ul><li><a href="le-groupe.html">Le Groupe</a></li><li><a href="filiales.html" class="active">Nos Filiales</a></li><li><a href="gouvernance.html">Gouvernance</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        </div>
+    </header>
+
+    <section class="filiales-hero">
+        <div class="container">
+            <span class="heading-subtitle">Le Portfolio</span>
+            <h1>Domaines d'Excellence</h1>
+            <p class="hero-subtitle" style="color: #666; max-width: 600px; margin: 0 auto;">Découvrez les trois piliers opérationnels du Groupe Azzera. Chacune de nos filiales est leader dans son domaine d'expertise.</p>
+        </div>
+    </section>
+
+    <section class="filiale-block">
+        <div class="container block-grid">
+            <div class="block-text">
+                <span class="heading-subtitle" style="color: var(--gold-accent);">Pôle Sûreté</span>
+                <h2>Azzera Protect</h2>
+                <p>L'entité historique du groupe. Azzera Protect déploie des dispositifs de sécurité privée, de gardiennage et de protection rapprochée d'une exigence quasi-militaire pour les professionnels, l'événementiel de luxe et les VIP.</p>
+                <ul class="expertise-list">
+                    <li><i class="fas fa-check"></i> Gardiennage & Sécurité Privée</li>
+                    <li><i class="fas fa-check"></i> Protection Rapprochée (VIP)</li>
+                    <li><i class="fas fa-check"></i> Sécurité Événementielle Premium</li>
+                </ul>
+                <a href="https://www.azzeraprotect.fr" target="_blank" class="btn-primary-invest">Accéder à Protect</a>
+            </div>
+            <div class="block-image">
+                <img src="img/logo-protect.png" alt="Azzera Protect">
+            </div>
+        </div>
+    </section>
+
+    <section class="filiale-block">
+        <div class="container block-grid">
+            <div class="block-image">
+                <img src="img/logo-azzera.png" alt="Azzera Services+">
+            </div>
+            <div class="block-text">
+                <span class="heading-subtitle" style="color: var(--gold-accent);">Pôle Facility Management</span>
+                <h2>Azzera Services+</h2>
+                <p>La maîtrise totale de vos environnements de travail. Nous prenons en charge la gestion, l'entretien et la maintenance de vos infrastructures pour garantir des espaces sains, valorisés et parfaitement opérationnels.</p>
+                <ul class="expertise-list">
+                    <li><i class="fas fa-check"></i> Nettoyage Professionnel & Industriel</li>
+                    <li><i class="fas fa-check"></i> Maintenance Multiservices</li>
+                    <li><i class="fas fa-check"></i> Pilotage Global (Facility Management)</li>
+                </ul>
+                <a href="https://www.azzeraservices.fr" target="_blank" class="btn-primary-invest">Accéder à Services+</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="filiale-block">
+        <div class="container block-grid">
+            <div class="block-text">
+                <span class="heading-subtitle" style="color: var(--gold-accent);">Pôle Accompagnement & Formation</span>
+                <h2>Azzera Academy</h2>
+                <p>Le transfert de notre expertise. L'académie accompagne les créateurs d'entreprise dans leurs démarches juridiques et forme les professionnels (Sécurité EPI, Management, Communication) pour élever le niveau global de compétence.</p>
+                <ul class="expertise-list">
+                    <li><i class="fas fa-check"></i> Création d'Entreprise & Juridique</li>
+                    <li><i class="fas fa-check"></i> Formations Sécurité Obligatoires (EPI)</li>
+                    <li><i class="fas fa-check"></i> Développement Personnel & Management</li>
+                </ul>
+                <a href="https://www.azzeracademy.fr" target="_blank" class="btn-primary-invest">Accéder à Academy</a>
+            </div>
+            <div class="block-image">
+                <img src="img/logo-academy.png" alt="Azzera Academy">
+            </div>
+        </div>
+    </section>
+
+    <footer class="legal-compliance">
+        <div class="container">
+            <div class="official-badge-container">
+                <div class="official-badge">
+                    <div class="badge-icon"><i class="fas fa-chess-king"></i></div>
+                    <div class="badge-content">
+                        <p class="badge-title">AZZERA INVEST GROUP (A.I.G) • Société Holding</p>
+                        <p class="badge-numbers"><strong>SIRET :</strong> 995 314 317 00018 | &nbsp;|&nbsp; <strong>Siège :</strong> 131 Avenue de Verdun, 83600 Fréjus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="compliance-inner">
+                <p>&copy; 2026 AZZERA INVEST GROUP (A.I.G) | Tous droits réservés sur l'ensemble du Groupe.</p>
+                <p style="margin-top: 10px;"><a href="mentions-legales.html" style="color: #888; text-decoration: none; transition: 0.3s; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">Mentions Légales & Politique de Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
