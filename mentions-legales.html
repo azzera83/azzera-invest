@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales & Confidentialité | Azzera Invest Group</title>
+    <meta name="description" content="Cadre juridique et politique de confidentialité de la holding AZZERA INVEST GROUP (A.I.G). Conforme RGPD et CNIL.">
+    <meta name="robots" content="index, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style-invest.css">
+
+    <style>
+        /* Force la police unique sur l'intégralité absolue des éléments */
+        * {
+            font-family: 'Montserrat', sans-serif !important;
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8f8fa;
+            color: #2d2d2f;
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Surlignage de luxe */
+        ::selection { background: #c5a880; color: #141c25; }
+
+        /* Fine Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f8f8fa; }
+        ::-webkit-scrollbar-thumb { background: #141c25; }
+        ::-webkit-scrollbar-thumb:hover { background: #c5a880; }
+
+        /* =========================================================
+           LE SAS D'ENTRÉE CINÉMATOGRAPHIQUE
+           ========================================================= */
+        .luxe-preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background: #141c25; z-index: 999999;
+            display: flex; justify-content: center; align-items: center;
+            animation: slideOutUp 1.2s cubic-bezier(0.8, 0, 0.2, 1) forwards 1.8s;
+        }
+        .preloader-content {
+            text-align: center; color: white; opacity: 0;
+            animation: pulseFade 1.6s ease-in-out forwards 0.2s;
+        }
+        .preloader-content img { height: 800px; margin-bottom: 20px; filter: drop-shadow(0 0 20px rgba(197,168,128,0.2)); }
+        
+        @keyframes pulseFade {
+            0% { opacity: 0; transform: scale(0.95); }
+            40% { opacity: 1; transform: scale(1); }
+            80% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.03); }
+        }
+        @keyframes slideOutUp { to { transform: translateY(-100%); pointer-events: none; visibility: hidden; } }
+
+        /* =========================================================
+           SCROLL REVEAL DESIGN
+           ========================================================= */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+        /* =========================================================
+           LAYOUT ÉDITORIAL JURIDIQUE
+           ========================================================= */
+        .legal-header {
+            padding: 140px 0 80px 0;
+            background: #141c25;
+            color: white;
+            text-align: center;
+        }
+        .legal-header h1 {
+            font-size: 3.5rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 20px;
+        }
+        .legal-subtitle {
+            color: #c5a880; font-size: 14px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+        }
+
+        .legal-nav-tabs {
+            display: flex; justify-content: center; gap: 30px; margin: -25px 0 60px 0;
+            position: relative; z-index: 10;
+        }
+        .tab-btn {
+            background: white; border: 1px solid rgba(20,28,37,0.06); padding: 15px 35px;
+            font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px;
+            color: #141c25; text-decoration: none; border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(20,28,37,0.04); transition: all 0.4s ease;
+        }
+        .tab-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(20,28,37,0.08); border-color: #c5a880; }
+
+        .legal-body { max-width: 900px; margin: 0 auto 120px auto; padding: 0 30px; }
+        
+        .legal-card {
+            background: white; border: 1px solid rgba(20,28,37,0.03); padding: 60px;
+            border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.02); margin-bottom: 40px;
+        }
+
+        .legal-section-title {
+            font-size: 1.8rem; font-weight: 900; color: #141c25; margin-bottom: 35px;
+            padding-bottom: 15px; border-bottom: 2px solid #141c25; display: flex; align-items: center; gap: 15px;
+        }
+        .legal-section-title i { color: #c5a880; font-size: 1.4rem; }
+
+        .legal-sub-block { margin-bottom: 35px; }
+        .legal-sub-block:last-child { margin-bottom: 0; }
+        
+        .legal-card h3 {
+            font-size: 1.1rem; font-weight: 700; color: #141c25; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;
+        }
+        .legal-card h3::before { content: ''; width: 4px; height: 14px; background: #c5a880; display: inline-block; }
+
+        .legal-card p, .legal-card li {
+            font-size: 14px; font-weight: 400; color: #555557; text-align: justify; margin-bottom: 15px;
+        }
+        .legal-card ul { list-style: none; padding-left: 15px; margin-bottom: 20px; }
+        .legal-card li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+        .legal-card li::before { content: '—'; color: #c5a880; font-weight: bold; }
+
+        .info-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-top: 20px;
+        }
+        .info-box {
+            background: #f8f8fa; padding: 20px; border-radius: 2px; border-left: 3px solid #141c25;
+        }
+        .info-box span { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 5px; }
+        .info-box p { font-size: 13px; font-weight: 600; color: #141c25; margin: 0; text-align: left; }
+
+        .placeholder-highlight { color: #c5a880; font-style: italic; font-weight: 600; }
+
+        @media(max-width: 768px) {
+            .legal-header h1 { font-size: 2.2rem; }
+            .legal-card { padding: 40px 20px; }
+            .legal-section-title { font-size: 1.4rem; }
+            .legal-nav-tabs { flex-direction: column; gap: 10px; padding: 0 20px; }
+            .tab-btn { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="luxe-preloader">
+        <div class="preloader-content">
+            <img src="img/logo-ouverture.png" alt="">
+            <h2 style="font-weight: 900; letter-spacing: 4px; font-size: 16px; margin:0;"></h2>
+        </div>
+    </div>
+
+    <nav class="topbar-corporate">
+        <ul class="topbar-links">
+            <li><a href="#" class="active">AZZERA INVEST</a></li>
+            <li><a href="https://www.azzeraprotect.fr">AZZERA PROTECT</a></li>
+            <li><a href="https://www.azzeraservices.fr">AZZERA SERVICES+</a></li>
+            <li><a href="https://www.azzeracademy.fr">AZZERA ACADEMY</a></li>
+        </ul>
+    </nav>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo-invest.png" alt="Logo Azzera Invest" style="height: 500px; width: auto; object-fit: contain;">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="le-groupe.html">Le Groupe</a></li>
+                    <li><a href="gouvernance.html">Gouvernance</a></li>
+                    <li><a href="filiales.html">Nos Filiales</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="legal-header">
+        <div class="container">
+            <span class="legal-subtitle">Conformité & Transparence</span>
+            <h1>Cadre Réglementaire</h1>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="legal-nav-tabs">
+            <a href="#mentions" class="tab-btn">Mentions Légales</a>
+            <a href="#confidentialite" class="tab-btn">Politique de Confidentialité</a>
+        </div>
+    </div>
+
+    <main class="legal-body">
+
+        <div id="mentions" class="legal-card reveal reveal-up">
+            <h2 class="legal-section-title"><i class="fas fa-gavel"></i> Mentions Légales</h2>
+            
+            <div class="legal-sub-block">
+                <h3>Éditeur du site</h3>
+                <p>Le présent site internet est édité et géré par la société mère du groupe :</p>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <span>Raison Sociale</span>
+                        <p>AZZERA INVEST GROUP (A.I.G)</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Numéro SIRET</span>
+                        <p>995 314 317 00018</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Siège Social</span>
+                        <p>131 Avenue de Verdun<br>83600 Fréjus, France</p>
+                    </div>
+                </div>
+                <div class="info-grid" style="margin-top: 15px;">
+                    <div class="info-box">
+                        <span>Correspondance Email</span>
+                        <p>contact@azzerainvest.fr</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Ligne Directe</span>
+                        <p class="placeholder-highlight">06 61 41 69 37</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Directeur de Publication</span>
+                        <p>Yannice LIBAULT</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>Hébergement</h3>
+                <p>L'infrastructure technologique et le stockage de la plateforme sont assurés par :</p>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <span>Hébergeur</span>
+                        <p class="placeholder-highlight">IONOS</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Adresse Officielle</span>
+                        <p class="placeholder-highlight">7 PLACE DE LA GARE 57200 SARREGUEMINES</p>
+                    </div>
+                    <div class="info-box">
+                        <span>Contact & Support</span>
+                        <p class="placeholder-highlight">0805 54 21 80  www.ionos.fr</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>Propriété intellectuelle</h3>
+                <p>L’ensemble des éléments présents sur ce site, notamment les structures de code, textes, images de marque, logos, graphismes, cinématiques vidéo, documents téléchargeables et autres contenus, sont protégés de plein droit par les dispositions strictes du Code de la propriété intellectuelle français et international.</p>
+                <p>Toute reproduction, représentation, modification, publication ou adaptation, totale ou partielle, de ces éléments, par quelque procédé que ce soit, est formellement interdite sans l'obtention préalable d'une autorisation écrite et signée par la direction d’AZZERA INVEST GROUP. Toute exploitation non autorisée sera considérée comme une contrefaçon et fera l’objet de poursuites judiciaires immédiates.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>Responsabilité institutionnelle</h3>
+                <p>AZZERA INVEST GROUP s’efforce de fournir sur ses plateformes des informations exactes, vérifiées et régulièrement mises à jour. Toutefois, la société holding ne saurait garantir l’exactitude absolue, l’exhaustivité ou l’actualité en temps réel des informations diffusées. L’utilisateur reconnaît utiliser ces données sous sa seule et entière responsabilité.</p>
+                <p>AZZERA INVEST GROUP ne pourra, en aucun cas, être tenue responsable des dommages directs ou indirects, matériels ou immatériels, résultant de l’accès ou de l’utilisation du présent site internet.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>Informations financières et stratégiques</h3>
+                <p>Les données, indicateurs et informations présentés sur ce site internet ont un caractère purement informatif, macroéconomique et institutionnel. Elles sont destinées à exposer la structure organisationnelle d'Azzera Invest Group.</p>
+                <p>Elles ne constituent en aucun cas une offre d’investissement, une incitation à la souscription de titres, ni un conseil juridique, fiscal, financier ou patrimonial, ni une sollicitation à investir dans une quelconque société du groupe ou de ses filiales. AZZERA INVEST GROUP se réserve le droit souverain de modifier à tout moment et sans préavis le contenu des informations diffusées.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>Politique des liens hypertextes</h3>
+                <p>Le site internet d’AZZERA INVEST GROUP (A.I.G) a principalement pour objet de présenter le groupe, ses activités, ses filiales, ses participations et les sociétés qui lui sont rattachées.</p>
+                <p>Les liens présents sur le site renvoient exclusivement vers les sites internet des sociétés appartenant au groupe ou placées sous son contrôle direct ou indirect. AZZERA INVEST GROUP veille avec la plus grande rigueur à la cohérence et à la qualité des informations diffusées sur l’ensemble de ses supports numériques. Toutefois, chaque filiale ou société rattachée demeure juridiquement indépendante et pleinement responsable du contenu publié sur son propre site internet.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>Droit applicable</h3>
+                <p>Les présentes mentions légales, le design système et l'infrastructure du site sont régis par le droit français. Tout litige relatif à l’utilisation, à l'interprétation ou à la validité du site sera soumis à la compétence exclusive des juridictions françaises compétentes.</p>
+            </div>
+        </div>
+
+        <div id="confidentialite" class="legal-card reveal reveal-up">
+            <h2 class="legal-section-title"><i class="fas fa-user-shield"></i> Politique de Confidentialité</h2>
+            
+            <div class="legal-sub-block">
+                <h3>1. Introduction</h3>
+                <p>AZZERA INVEST GROUP (A.I.G) accorde une importance critique et une vigilance absolue à la protection, l'intégrité et la confidentialité des données personnelles de ses visiteurs, partenaires, investisseurs, clients et prospects.</p>
+                <p>La présente politique détaille en toute transparence les processus de collecte et de traitement des données, réalisés en stricte conformité avec le Règlement Général sur la Protection des Données (RGPD) et la loi Informatique et Libertés.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>2. Responsable du traitement</h3>
+                <p>L'entité juridique collectrice et responsable des données est la société :<br>
+                <strong>AZZERA INVEST GROUP (A.I.G)</strong>, SAS établie au 131 Avenue de Verdun, 83600 Fréjus, France, immatriculée sous le numéro SIRET 995 314 317 00018. Correspondance : <em>contact@azzera-invest-group.fr</em>.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>3. Données collectées</h3>
+                <p>Selon la nature de vos interactions avec notre plateforme corporate, les données techniques et déclaratives suivantes peuvent faire l'objet d'un traitement sécurisé :</p>
+                <ul>
+                    <li>Identité civile : Nom et prénom.</li>
+                    <li>Coordonnées professionnelles : Adresse e-mail, numéro de téléphone.</li>
+                    <li>Informations de structure : Raison sociale de votre entreprise, fonction professionnelle exercée.</li>
+                    <li>Empreinte technique : Adresse IP anonymisée, métadonnées de navigation.</li>
+                    <li>Contenu : L'ensemble des messages et pièces transmis via nos formulaires de contact chiffrés.</li>
+                </ul>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>4. Finalités du traitement</h3>
+                <p>La collecte de ces données répond à des besoins de gouvernance explicites et légitimes :</p>
+                <ul>
+                    <li>Traiter et répondre avec diligence aux requêtes adressées à la direction.</li>
+                    <li>Assurer le suivi rigoureux des échanges commerciaux et des relations institutionnelles.</li>
+                    <li>Gérer l'accès aux dossiers des partenaires d'affaires et des investisseurs du groupe.</li>
+                    <li>Optimiser les performances d'affichage et l'expérience utilisateur de notre interface de luxe.</li>
+                    <li>Établir des statistiques de fréquentation anonymes et prévenir les tentatives d'ingérence ou d'intrusion informatique.</li>
+                </ul>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>5. Base légale du traitement</h3>
+                <p>Chaque traitement de donnée s'appuie juridiquement sur au moins l'un des fondements suivants :</p>
+                <ul>
+                    <li>Le consentement explicite et éclairé formalisé par l'utilisateur lors de l'envoi d'un formulaire.</li>
+                    <li>L’exécution de mesures précontractuelles, d'audits ou d'accords contractuels formalisés.</li>
+                    <li>Le respect strict de nos obligations légales et réglementaires.</li>
+                    <li>L’intérêt légitime d’AZZERA INVEST GROUP dans le développement, la croissance et la sécurisation technologique de ses activités d'investissement.</li>
+                </ul>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>6. Durée de conservation</h3>
+                <p>Les données sont conservées dans des environnements chiffrés pendant une durée strictement proportionnée aux objectifs poursuivis :</p>
+                <ul>
+                    <li>Requêtes et formulaires de contact : 3 ans maximum à compter du dernier échange technique ou humain.</li>
+                    <li>Données de prospection stratégique : 3 ans après le dernier contact initié par le prospect.</li>
+                    <li>Clients, filiales et partenaires contractuels : Intégralité de la durée de la relation d'affaires, puis archivage légal sécurisé selon les prescriptions légales.</li>
+                    <li>Données techniques et cookies d'audience : 13 mois maximum à compter de leur dépôt sur le terminal.</li>
+                </ul>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>7. Destinataires des données</h3>
+                <p>Les données collectées au sein de notre écosystème numérique sont exclusivement destinées :</p>
+                <ul>
+                    <li>Aux dirigeants et membres du Conseil d'Administration d'AZZERA INVEST GROUP.</li>
+                    <li>Aux collaborateurs internes dument habilités par la direction pour le traitement de votre dossier.</li>
+                    <li>Aux prestataires techniques tiers (hébergeur, outils système) indispensables à l'exécution et la maintenance sécurisée du site.</li>
+                </ul>
+                <p><strong>Clause de non-aliénation :</strong> AZZERA INVEST GROUP garantit de manière absolue qu'aucune donnée personnelle n’est vendue, louée, cédée ou transmise à des tiers à des fins marketing ou publicitaires.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>8. Sécurité et chiffrement</h3>
+                <p>Azzera Invest Group met en œuvre un protocole de sécurité technique et organisationnel de niveau institutionnel afin de prémunir l'ensemble de vos données contre toute altération, perte, accès non autorisé ou interception malveillante. Les flux d'échanges du site font l'objet d'un chiffrement SSL/TLS continu.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>9. Droits des utilisateurs</h3>
+                <p>Conformément au cadre européen du RGPD, chaque citoyen dispose de droits de contrôle absolus sur ses données personnelles :</p>
+                <ul>
+                    <li>Droit d’accès et de consultation complète des données stockées.</li>
+                    <li>Droit de rectification et de mise à jour des informations inexactes.</li>
+                    <li>Droit d’effacement définitif de vos données (droit à l’oubli).</li>
+                    <li>Droit à la limitation du traitement et droit d’opposition légitime.</li>
+                    <li>Droit à la portabilité de vos données dans un format structuré et standardisé.</li>
+                </ul>
+                <p>L'exercice de ces droits s'effectue par simple demande écrite adressée directement à la direction du groupe par e-mail : <strong>contact@azzera-invest-group.fr</strong>.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>10. Droit de réclamation</h3>
+                <p>En cas de différend ou de litige persistant relatif à l’intégrité ou au traitement de vos données personnelles par nos services, vous disposez du droit légal d’introduire une réclamation officielle auprès de l’autorité de contrôle compétente en France : la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés — www.cnil.fr).</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>11. Cookies de navigation</h3>
+                <p>Notre plateforme utilise des traceurs minimalistes et des cookies techniques de haute performance. Ils ont pour buts uniques d’assurer le bon fonctionnement structurel du site, de fluidifier la navigation, de mesurer l’audience de manière anonyme et de renforcer la sécurité globale contre les cyberattaques. L’utilisateur conserve le contrôle total de ses préférences et peut configurer les options de son navigateur internet afin de refuser l'installation de ces cookies.</p>
+            </div>
+
+            <div class="legal-sub-block">
+                <h3>12. Modification de la présente politique</h3>
+                <p>AZZERA INVEST GROUP se réserve le droit exclusif de modifier ou de mettre à jour à tout moment les clauses de la présente politique de confidentialité, afin de refléter fidèlement les évolutions techniques de nos infrastructures ou les modifications de la législation en vigueur.</p>
+                <p style="margin-top: 30px; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #141c25;">
+                    Dernière mise à jour de conformité : 10 juin 2026.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="legal-compliance">
+        <div class="container">
+            <div class="official-badge-container">
+                <div class="official-badge">
+                    <div class="badge-icon"><i class="fas fa-chess-king"></i></div>
+                    <div class="badge-content">
+                        <p class="badge-title">AZZERA INVEST GROUP SAS • Société Holding</p>
+                        <p class="badge-numbers"><strong>SIRET :</strong> 995 314 317 00018 | &nbsp;|&nbsp; <strong>Siège :</strong> 131 Avenue de Verdun, 83600 Fréjus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="compliance-inner">
+                <p>&copy; 2026 Azzera Invest Group SAS | Tous droits réservés sur l'ensemble du Groupe.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ENGIN DE DETECTION SCROLL REVEAL JURIDIQUE
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.05 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
